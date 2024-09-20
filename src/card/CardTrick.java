@@ -32,6 +32,11 @@ public class CardTrick {
             magicHand[i] = c;
         }
 
+        Card luckyCard = new Card();
+        luckyCard.setValue(2);
+        luckyCard.setSuit("Clubs");
+
+        
         Scanner input = new Scanner(System.in);
 
         System.out.println("Pick a card Any Card.");
@@ -58,6 +63,12 @@ public class CardTrick {
             System.out.println("Your card is in the magic hand!");
         } else {
             System.out.println("Sorry, your card is not in the magic hand.");
+        }
+        if (userCard.getValue() == luckyCard.getValue() &&
+            userCard.getSuit().equalsIgnoreCase(luckyCard.getSuit())) {
+            System.out.println("Congratulations! You found the lucky card!");
+        } else {
+            System.out.println("You lost!");
         }
         input.close();
     }
