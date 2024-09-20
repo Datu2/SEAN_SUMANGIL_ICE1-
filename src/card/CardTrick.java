@@ -59,18 +59,6 @@ public class CardTrick {
         } else {
             System.out.println("Sorry, your card is not in the magic hand.");
         }
-
-        Card luckyCard = new Card();
-        luckyCard.setValue(2);
-        luckyCard.setSuit("Clubs");
-
-        if (userCard.getValue() == luckyCard.getValue() &&
-            userCard.getSuit().equalsIgnoreCase(luckyCard.getSuit())) {
-            System.out.println("Congratulations! You found the lucky card!");
-        } else {
-            System.out.println("The lucky card was " + luckyCard.getValue() + " of " + luckyCard.getSuit());
-        }
-
         input.close();
     }
 
